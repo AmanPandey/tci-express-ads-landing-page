@@ -1,17 +1,25 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import Header from "../sections/Header.astro";
+import Hero1 from "../sections/Hero1.jsx";
+import WhyChooseMBG1 from "../sections/WhyChooseMBG1.jsx";
+import Partner from "../sections/Partner.jsx";
+import Horizons from "../sections/Horizons.jsx";
+import CTAstrip from "../sections/CTAstrip.jsx";
+import TrustStrip from "../sections/TrustStrip.jsx";
+import Reviews from "../sections/Reviews.jsx";
+import HeadingLibrary from "../sections/HeadingLibrary.jsx";
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <Header />
+  <Hero1 client:visible />
+  <WhyChooseMBG1 client:visible />
+  <Partner client:visible />
+  <Horizons client:visible />
+  <CTAstrip client:visible />
+  <Reviews client:visible />
+  <TrustStrip client:visible />
+  <!-- <HeadingLibrary client:visible /> -->
+</Layout>
