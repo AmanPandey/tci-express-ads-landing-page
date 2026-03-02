@@ -21,13 +21,13 @@ export default function WhyChooseMBG1() {
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
             >
-            {/* <div className="hd-2 hd-title"><h2 className="hd-title">Why? <span>Businesses Choose TCI Express MBG</span></h2></div> */}
-            <div class="mbgTitle mbgTitle-2">
+            Why Businesses Choose TCI Express MBG
+            {/* <div class="mbgTitle mbgTitle-2">
               <h2 class="mbgTitle__h">
                 Why MBG?
                 <span class="mbgTitle__sub">Businesses Choose TCI Express MBG Services:</span>
               </h2>
-            </div>
+            </div> */}
             </motion.h2>
 
             <motion.ul

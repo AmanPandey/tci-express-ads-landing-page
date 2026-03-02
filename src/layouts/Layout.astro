@@ -1,5 +1,11 @@
 ---
 import "../styles/global.css";
+
+const siteTitle = "MBG | TCI Express";
+const siteDescription =
+  "Enterprise-grade express logistics with Money Back Guarantee across India.";
+const siteUrl = "https://tci-express-ads-landing-page.vercel.app"; // update after domain ready
+const ogImage = "/og-mbg.jpg";
 ---
 
 <!doctype html>
@@ -10,11 +16,33 @@ import "../styles/global.css";
     <link rel="icon" href="/mbg-favicon-64X64.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>MBG | TCI Express</title>
+
+    <!-- Primary SEO -->
+    <title>{siteTitle}</title>
+    <meta name="description" content={siteDescription} />
+
+    <!--  Open Graph (LinkedIn, WhatsApp, Facebook) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={siteDescription} />
+    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:description" content={siteDescription} />
+    <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+
+    <!-- Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-
-  
   <body>
     <slot />
   </body>
