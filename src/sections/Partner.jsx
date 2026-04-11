@@ -4,49 +4,71 @@ import { motion } from "framer-motion";
 
 export default function Partner() {
   return (
-    <section className="partner">
-      <div className="overlay"></div>
+    <section className="pr-partner">
+      <div className="pr-overlay"></div>
 
-      <div className="container inner">
-        {/* POINTS */}
-        <div className="points">
+      <div className="container pr-inner">
+
+        {/* HEADER */}
+        <div className="pr-header">
+          <h2 className="pr-title">
+            HOW MONEY BACK GUARANTEE WORKS
+          </h2>
+          <p className="pr-sub">
+            Simple. Transparent. Reliable.
+          </p>
+        </div>
+
+        {/* STEPS */}
+        <div className="pr-content">
+
           <Motion>
-            <div className="point">
-              <span className="tick">✓</span>
-              <div className="text">
-                <strong>Serving 2,000+</strong> Businesses every day across India
+            <div className="pr-step">
+              <div className="pr-icon">01</div>
+              <div className="pr-text">
+                Book your shipment with us
               </div>
             </div>
-            <hr className="divider" />
           </Motion>
 
           <Motion delay={0.1}>
-            <div className="point">
-              <span className="tick">✓</span>
-              <div className="text">
-                Preferred logistics partner for enterprise & commercial operations
+            <div className="pr-step">
+              <div className="pr-icon">02</div>
+              <div className="pr-text">
+                Get a committed delivery timeline
               </div>
             </div>
-            <hr className="divider" />
           </Motion>
 
           <Motion delay={0.2}>
-            <div className="point">
-              <span className="tick">✓</span>
-              <div className="text">
-                Backed by a strong pan-India express delivery network
+            <div className="pr-step">
+              <div className="pr-icon">03</div>
+              <div className="pr-text">
+                If delayed, claim your money back*
               </div>
             </div>
           </Motion>
+
+        </div>
+
+        {/* FOOTER */}
+        <div className="pr-footer">
+          <p className="pr-note">
+            *As per standard terms &amp; conditions
+          </p>
+
+          <div className="pr-trust">
+            <span className="pr-tick">✔</span>
+            <span>No hidden clauses. No complicated process.</span>
+          </div>
         </div>
 
         {/* LOGOS */}
         <motion.div
-          className="logos"
+          className="pr-logos"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+          transition={{ duration: 0.6 }}
         >
           <img src="/company_logo-1.png" alt="" />
           <img src="/company_logo-2.png" alt="" />
@@ -55,6 +77,7 @@ export default function Partner() {
           <img src="/company_logo-5.png" alt="" />
           <img src="/company_logo-6.png" alt="" />
         </motion.div>
+
       </div>
     </section>
   );

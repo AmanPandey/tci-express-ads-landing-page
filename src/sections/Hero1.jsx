@@ -1,115 +1,175 @@
-// src/sections/Hero1.jsx
-import React from "react";
-import Motion from "./Motion";
 import { motion } from "framer-motion";
 
+const HERO_STATS = [
+  "98%+ On-Time Delivery",
+  "60,000+ Serviceable Locations",
+  "5,500+ Fleet Strength",
+  "1 Lakh+ Shipments Delivered Daily",
+  "1 Lakh+ TON Volume Handled Daily",
+  "2.25 Lakh+ Clientele",
+  "60,000+ Serviceable Locations",
+  "5,500+ Fleet Strength",
+];
+
 export default function Hero1() {
+  const maxTop = 5;
+  const topStats = HERO_STATS.slice(0, maxTop);
+  const bottomStats = HERO_STATS.slice(maxTop);
+
   return (
-    <section className="hero1" aria-label="Money Back Guarantee Hero">
+    <section className="hero1">
       <div className="h1Overlay" />
 
       <div className="container">
         <div className="h1Grid">
+
           {/* LEFT */}
-          <Motion delay={0.05}>
-            <div className="h1Left">
-              <Motion delay={0.12}>
-                <h1 className="h1Title">
-                  On-Time Delivery for Your Business Shipments
-                  <br />
-                  <Motion delay={0.22}>
-                    <span>Or Money Back!</span>
-                  </Motion>
-                </h1>
-              </Motion>
+          <div className="h1Left">
 
-              <Motion delay={0.32}>
-                <p className="h1Para">
-                  Enterprise-grade express logistics for bulk shipments across India.
-                </p>
-              </Motion>
-            </div>
-          </Motion>
+            <motion.h1
+              className="h1Title"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              On-Time Delivery for Your Shipments <span>Or Money Back!</span>
+            </motion.h1>
 
-          {/* RIGHT */}
+            <motion.p
+              className="h1Para"
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15, duration: 0.6 }}
+            >
+              India’s most reliable B2B express logistics network with
+              industry-leading on-time delivery across 60,000+ locations.
+            </motion.p>
+
+            <motion.p
+              className="h1Trust"
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25, duration: 0.6 }}
+            >
+              Trusted by leading enterprises across automotive, pharma,
+              retail & e-commerce sectors.
+            </motion.p>
+
+            <motion.div
+              className="h1Ctas"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.35, duration: 0.5 }}
+            >
+              <motion.button
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
+                className="h1BtnPrimary"
+              >
+                Book a Shipment Now
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
+                className="h1BtnSecondary"
+              >
+                Get Your Quote
+              </motion.button>
+            </motion.div>
+
+          </div>
+
+          {/* FORM */}
           <motion.aside
             className="h1Card"
-            aria-label="Get a Business Shipping Quote"
-            initial={{ opacity: 0, x: 28, scale: 0.98 }}
-            whileInView={{ opacity: 1, x: 0, scale: 1 }}
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
+            initial={{ opacity: 0, x: 60, scale: 0.95 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
           >
             <div className="h1CardHead">
-              <h3 className="h1CardTitle">Get a Business Shipping Quote</h3>
+              <h3>Get a Business Shipping Quote</h3>
             </div>
 
-            <form className="h1Form" onSubmit={(e) => e.preventDefault()}>
-              <Motion delay={0.22}>
-                <label className="h1Field">
-                  <input
-                    className="h1Input"
-                    type="text"
-                    required
-                    placeholder="Full Name"
-                  />
-                </label>
-              </Motion>
+            <form className="h1Form">
 
-              <Motion delay={0.26}>
-                <label className="h1Field">
-                  <input
-                    className="h1Input"
-                    type="text"
-                    required
-                    placeholder="Company Name"
-                  />
-                </label>
-              </Motion>
+              {[ "Full Name", "Company Name", "Business Email", "Phone Number" ].map((ph, i) => (
+                <motion.input
+                  key={ph}
+                  className="h1Input"
+                  placeholder={ph}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 + i * 0.08 }}
+                />
+              ))}
 
-              <Motion delay={0.3}>
-                <label className="h1Field">
-                  <input
-                    className="h1Input"
-                    type="email"
-                    required
-                    placeholder="Business Email"
-                  />
-                </label>
-              </Motion>
+              <motion.select
+                className="h1Select"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+              >
+                <option>Shipment Requirement</option>
+              </motion.select>
 
-              <Motion delay={0.34}>
-                <label className="h1Field">
-                  <input
-                    className="h1Input"
-                    type="tel"
-                    required
-                    placeholder="Phone Number"
-                  />
-                </label>
-              </Motion>
+              <motion.button
+                className="h1Btn"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7 }}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                Request a Callback
+              </motion.button>
 
-              <Motion delay={0.38}>
-                <label className="h1Field">
-                  <select className="h1Select" required defaultValue="">
-                    <option value="" disabled>
-                      Shipment Requirement
-                    </option>
-                    <option value="air">Air</option>
-                    <option value="surface">Surface</option>
-                    <option value="rail">Rail</option>
-                  </select>
-                </label>
-              </Motion>
-
-              <Motion delay={0.45}>
-                <button className="h1Btn" type="submit">
-                  Request a Callback
-                </button>
-              </Motion>
             </form>
           </motion.aside>
+
         </div>
+
+        {/* STATS */}
+        <motion.div
+          className="h1StatsOuter"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+        >
+
+          <div className="h1StatsTop">
+            <div className="h1StatsRow">
+              {topStats.map((item, i) => (
+                <motion.span
+                  key={item}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6 + i * 0.05 }}
+                >
+                  {item}
+                </motion.span>
+              ))}
+            </div>
+          </div>
+
+          {bottomStats.length > 0 && (
+            <div className="h1StatsBottom">
+              <div className="h1StatsRow right">
+                {bottomStats.map((item, i) => (
+                  <motion.span
+                    key={item}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.8 + i * 0.05 }}
+                  >
+                    {item}
+                  </motion.span>
+                ))}
+              </div>
+            </div>
+          )}
+
+        </motion.div>
       </div>
     </section>
   );
