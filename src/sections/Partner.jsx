@@ -11,9 +11,9 @@ export default function Partner() {
 
         {/* HEADER */}
         <div className="pr-header">
-          <h2 className="pr-title">
+          {/* <h2 className="pr-title">
             HOW MONEY BACK GUARANTEE WORKS
-          </h2>
+          </h2> */}
           <p className="pr-sub">
             Simple. Transparent. Reliable.
           </p>
