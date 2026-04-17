@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../sections/Header.astro";
+import Header from "../sections/Header.jsx";
 import Hero1 from "../sections/Hero1.jsx";
 import WhyChooseMBG1 from "../sections/WhyChooseMBG1.jsx";
 import Partner from "../sections/Partner.jsx";
@@ -15,23 +15,25 @@ import CaseStudy from "../sections/CaseStudy.jsx";
 import Comparison from "../sections/Comparison.jsx";
 import Urgency from "../sections/Urgency.jsx";
 import LeadForm from "../sections/LeadForm.jsx";
+import ClientLogoStrip from "../sections/ClientLogoStrip.jsx";
 ---
 
 <Layout>
-  <Header />
+  <Header client:load />
+
   <Hero1 client:visible />
   <WhyChooseMBG1 client:visible />
   <Partner client:visible />
   <Horizons client:visible />
   <WhoIsThisFor client:visible />
+  <LeadForm client:visible />
   <ProofPerformance client:visible />
   <CaseStudy client:visible />
   <Comparison client:visible />
   <Urgency client:visible />
-  <LeadForm client:visible />
 
   <CTAstrip client:visible />
   <Reviews client:visible />
+  <ClientLogoStrip client:visible />
   <TrustStrip client:visible />
-  <!-- <HeadingLibrary client:visible /> -->
 </Layout>

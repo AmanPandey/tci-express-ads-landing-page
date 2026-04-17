@@ -9,15 +9,15 @@ export default function Reviews() {
 
       <div className="container">
         <div className="reviewsGrid">
+
           {/* Review 1 */}
           <Motion>
             <article className="reviewsCard" aria-label="Client testimonial">
               <span className="reviewsQuoteLeft" aria-hidden="true">“</span>
 
               <p className="reviewsText">
-                <strong>TCIEXPRESS</strong> always delivers on time.
-                <br />
-                Our trusted logistics partner for years!
+                <strong>TCI Express</strong> is known for its innovation, transparency, and on-time delivery. 
+                At Tata Hitachi, our vision is to contribute to nation-building, and having a partner like TCI Express supports us in achieving that goal efficiently.
               </p>
 
               <p className="reviewsAuthor">
@@ -25,7 +25,6 @@ export default function Reviews() {
               </p>
 
               <span className="reviewsQuoteRight" aria-hidden="true">”</span>
-
               <span className="reviewsTail" aria-hidden="true"></span>
             </article>
           </Motion>
@@ -36,9 +35,8 @@ export default function Reviews() {
               <span className="reviewsQuoteLeft" aria-hidden="true">“</span>
 
               <p className="reviewsText">
-                <strong>TCIEXPRESS</strong> always delivers on time.
-                <br />
-                Our trusted logistics partner for years!
+                Lifelong Meditech Private Limited deals in essential healthcare and hygiene products.
+                <strong>TCI Express</strong> consistently ensures prompt, safe, and timely deliveries, and we are highly satisfied with their services.
               </p>
 
               <p className="reviewsAuthor">
@@ -46,22 +44,10 @@ export default function Reviews() {
               </p>
 
               <span className="reviewsQuoteRight" aria-hidden="true">”</span>
-
               <span className="reviewsTail" aria-hidden="true"></span>
             </article>
           </Motion>
 
-          {/* If you later enable logos card, wrap it too */}
-          {/* <Motion delay={0.2}>
-            <div className="reviewsLogoCard" aria-label="Client logos">
-              <div className="reviewsLogoRow">
-                <img src="/temp-logo-1.png" alt="Client logo 1" />
-                <img src="/temp-logo-2.png" alt="Client logo 2" />
-                <img src="/temp-logo-3.png" alt="Client logo 3" />
-                <img src="/temp-logo-4.png" alt="Client logo 4" />
-              </div>
-            </div>
-          </Motion> */}
         </div>
       </div>
     </section>

@@ -6,9 +6,14 @@ export default function TrustStrip() {
     <section className="trustWrap" aria-label="Trust and compliance">
       <div className="container">
         <div className="trustStrip">
+
           <Motion>
             <div className="trustItem">
-              <img className="trustIcon" src="/fast-&-sequre.png" alt="" />
+              <img
+                className="trustIcon"
+                src="/mbg-logo-1.svg"
+                alt="Money Back Guarantee"
+              />
               <div className="trustText">
                 <div className="trustTitle">Money Back</div>
                 <div className="trustSub">Guarantee</div>
@@ -47,7 +52,14 @@ export default function TrustStrip() {
               </div>
             </div>
           </Motion>
+
         </div>
+
+        {/* NEW FOOTER NOTE */}
+        <div className="trustNote">
+          *Money Back Guarantee applicable on select services as per company terms and conditions.
+        </div>
+
       </div>
 
       {/* bottom mini footer strip */}
