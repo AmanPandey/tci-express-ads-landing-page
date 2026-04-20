@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import FormModal from "./FormModal";
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
+
+  const [openModal, setOpenModal] = useState(false);
+  const [modalConfig, setModalConfig] = useState({
+    title: "",
+    ctaName: "",
+    color: "",
+  });
 
   return (
     <>
@@ -17,18 +23,30 @@ export default function Header() {
 
           <button
             className="cta-main-contact"
-            onClick={() => setOpen(true)}
+            onClick={() => {
+              setModalConfig({
+                title: "Contact Us",
+                ctaName: "Header Contact",
+                color: "#da3040",
+              });
+              setOpenModal(true);
+            }}
           >
             <span className="cta-main-contact__text">Contact Us</span>
-            <span className="cta-main-contact__icon">✉</span>
+            <span className="cta-main-contact__icon">
+              ✉
+            </span>
           </button>
 
         </div>
       </header>
 
       <FormModal
-        isOpen={open}
-        onClose={() => setOpen(false)}
+        isOpen={openModal}
+        onClose={() => setOpenModal(false)}
+        title={modalConfig.title}
+        ctaName={modalConfig.ctaName}
+        color={modalConfig.color}
       />
     </>
   );

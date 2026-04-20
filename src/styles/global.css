@@ -408,7 +408,7 @@ body {
   display: none;
 }
 .cta-main-contact__icon {
-  font-size: 16px;
+  font-size: 23px;
   line-height: 1;
 }
 
@@ -438,8 +438,6 @@ body {
     display: none;
   }
 }
-
-
 
 
 
@@ -752,7 +750,7 @@ body {
 /* =========================================================
    PARTNER SECTION
 ========================================================= */
-
+/* 
 .partner{
   position: relative;
   width: 100%;
@@ -777,7 +775,7 @@ body {
 }
 
 /* POINTS */
-.points{
+/* .points{
   border-radius: var(--radius-lg);
   border: 1px solid var(--c-border);
   box-shadow: var(--shadow-soft);
@@ -815,10 +813,10 @@ body {
   border: none;
   border-top: 1px solid var(--c-border);
   margin: 20px 0;
-}
+} */
 
 /* LOGOS */
-.logos{
+/* .logos{
   margin-top: 30px;
   width: 100%;
   display: flex;
@@ -839,7 +837,7 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 992px){
+/* @media (max-width: 992px){
   .point{
     grid-template-columns: 42px 1fr;
   }
@@ -849,7 +847,7 @@ body {
     gap: 20px;
     justify-content: center;
   }
-}
+}  */ 
 
 
 
@@ -858,9 +856,9 @@ body {
 ========================================================= */
 
 .pr-partner {
+  padding: (50px, 7vw, 90px) 0;
   position: relative;
   width: 100%;
-  padding: (50px, 7vw, 90px) 0;
   background: url("/partner-section-bg.jpeg") center / cover no-repeat;
 }
 
@@ -1083,7 +1081,7 @@ body {
   flex: 0 0 220px;
   max-width: 220px;
 
-  border-radius: var(--radius);
+  /* border-radius: var(--radius); */
   overflow: hidden;
   background: #fff;
   box-sizing: border-box;
@@ -1198,7 +1196,7 @@ body {
   position: absolute;
   inset: 0;
 
-  background: url("/bg1.jpg") center / cover no-repeat;
+  background: url("/bg5.jpg") center / cover no-repeat;
   opacity: 0.15; /* control transparency here */
 
   z-index: 0;
@@ -2935,7 +2933,7 @@ body {
 .trustLinks a{
   text-decoration: none;
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--secondary-theme-color);
 }
 
@@ -2956,7 +2954,7 @@ body {
   }
 
   .trustBottomInner{
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
   }
 }
@@ -3037,7 +3035,7 @@ body {
 
 
 /* =========================
-   FORM MODAL (UPDATED)
+   FORM MODAL
 ========================= */
 
 .fm-overlay {
@@ -3121,4 +3119,89 @@ body {
   font-weight: 800;
   cursor: pointer;
   margin-top: 6px;
+}
+
+
+
+
+
+.fm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.fm-card {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+}
+
+.fm-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+
+
+
+/* =========================
+   tERMS MODAL
+========================= */
+
+
+.tm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.tm-card {
+  width: 100%;
+  max-width: 600px;
+  max-height: 80vh;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.tm-header {
+  padding: 16px 20px;
+  background: #0e60a7;
+  color: #fff;
+  font-weight: 700;
+}
+
+.tm-content {
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 60vh;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.tm-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: #fff4f5;
 }

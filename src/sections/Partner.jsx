@@ -11,9 +11,9 @@ export default function Partner() {
 
         {/* HEADER */}
         <div className="pr-header">
-          {/* <h2 className="pr-title">
+          <h2 className="pr-title">
             HOW MONEY BACK GUARANTEE WORKS
-          </h2> */}
+          </h2>
           <p className="pr-sub">
             Simple. Transparent. Reliable.
           </p>
@@ -58,13 +58,13 @@ export default function Partner() {
           </p>
 
           <div className="pr-trust">
-            <span className="pr-tick">✔</span>
-            <span>No hidden clauses. No complicated process.</span>
+            {/* <span className="pr-tick">✔</span>
+            <span>No hidden clauses. No complicated process.</span> */}
           </div>
         </div>
 
         {/* LOGOS */}
-        <motion.div
+        {/* <motion.div
           className="pr-logos"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ export default function Partner() {
           <img src="/company_logo-4.png" alt="" />
           <img src="/company_logo-5.png" alt="" />
           <img src="/company_logo-6.png" alt="" />
-        </motion.div>
+        </motion.div> */}
 
       </div>
     </section>

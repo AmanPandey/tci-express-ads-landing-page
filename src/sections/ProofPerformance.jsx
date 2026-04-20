@@ -23,15 +23,15 @@ export default function ProofPerformance() {
 
           <Motion>
             <div className="pp-box">
-              <div className="pp-value">98%+</div>
-              <div className="pp-label">On-time Delivery</div>
+              <div className="pp-value">29000+</div>
+              <div className="pp-label">PIN Codes</div>
             </div>
           </Motion>
 
           <Motion delay={0.1}>
             <div className="pp-box">
-              <div className="pp-value">1L+</div>
-              <div className="pp-label">B2B Clients Served</div>
+              <div className="pp-value">2.25 lakh+</div>
+              <div className="pp-label">Clients Served</div>
             </div>
           </Motion>
 

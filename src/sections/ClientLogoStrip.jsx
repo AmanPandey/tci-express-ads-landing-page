@@ -5,7 +5,7 @@ const CLIENT_LOGOS = [
   "/company_logo-2.png",
   "/company_logo-3.png",
   "/company_logo-4.png",
-  "/company_logo-5.png",
+  // "/company_logo-5.png",
   "/company_logo-6.png",
 ];
 

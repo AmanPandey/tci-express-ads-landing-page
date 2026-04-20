@@ -2,12 +2,13 @@ import React, { useRef } from "react";
 import Motion from "./Motion";
 
 const HORIZONS = [
-  "/hrz1.jpeg",
-  "/hrz2.jpeg",
-  "/hrz3.jpeg",
-  "/hrz4.jpeg",
-  "/hrz5.jpeg",
   "/hrz6.jpeg",
+  "/hrz1.jpeg",
+  "/hrz5.jpeg",
+  "/hrz4.jpeg",
+  "/hrz3.jpeg",
+  "/hrz2.jpeg",
+  
   // "/domestic-logo.png",
   // "/international-logo.png",
   // "/rail-logo.png",
@@ -35,7 +36,7 @@ export default function Horizons() {
         <Motion delay={0.05}>
           <div className="mbgTitle mbgTitle-2 mbgTitle-2--center">
             <h2 className="">
-              One Partner  
+              One Partner,   
               <span className="mbgTitle__sub"> Multiple Express Solutions.</span>
             </h2>
           </div>
