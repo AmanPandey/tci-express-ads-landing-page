@@ -21,7 +21,7 @@ export default function Reviews() {
               </p>
 
               <p className="reviewsAuthor">
-                — <span>Rahul Mehta</span>, Operations Manager
+                — <span>Mr. Satender</span>, Divisional Manager, TATA Hitachi
               </p>
 
               <span className="reviewsQuoteRight" aria-hidden="true">”</span>
@@ -40,7 +40,7 @@ export default function Reviews() {
               </p>
 
               <p className="reviewsAuthor">
-                — <span>Rahul Mehta</span>, Operations Manager
+                — <span>Mr. Manoj Bhardwaj</span>, Logistics head, Lifelong Meditech
               </p>
 
               <span className="reviewsQuoteRight" aria-hidden="true">”</span>
