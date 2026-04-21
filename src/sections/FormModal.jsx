@@ -135,9 +135,9 @@ export default function FormModal({ isOpen, onClose, title, ctaName, color }) {
             style={{ color: formData.shipmentType ? "#111827" : "#9ca3af" }}
           >
             <option value="">Shipment Type</option>
-            <option value="Air Shipment">Air</option>
             <option value="Surface Shipment">Surface</option>
-            <option value="Express Shipment">Express</option>
+            <option value="Air Shipment">Air</option>
+            <option value="Rail Shipment">Rail</option>
           </select>
 
           {/* SUBMIT BUTTON */}

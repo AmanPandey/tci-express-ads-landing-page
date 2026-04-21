@@ -166,7 +166,7 @@ export default function Hero1() {
               </motion.button> */}
 
 
-              <motion.button
+              {/* <motion.button
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
                 className="h1BtnPrimary"
@@ -192,7 +192,7 @@ export default function Hero1() {
                 }}
               >
                 Get Your Quote
-              </motion.button>
+              </motion.button> */}
 
 
             </motion.div>
@@ -206,7 +206,7 @@ export default function Hero1() {
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
           >
             <div className="h1CardHead">
-              <h3>Get a Business Shipping Quote</h3>
+              <h3>Book a Shipment Now!</h3>
             </div>
 
             <form className="h1Form" onSubmit={handleSubmit}>
@@ -261,9 +261,9 @@ export default function Hero1() {
                 transition={{ delay: 0.6 }}
               >
                 <option value="" style={{ color: "#9ca3af" }}>Shipment Type</option>
-                <option value="Air Shipment">Air</option>
                 <option value="Surface Shipment">Surface</option>
-                <option value="Express Shipment">Express</option>
+                <option value="Air Shipment">Air</option>
+                <option value="Rail Shipment">Rail</option>
               </motion.select>
 
               <motion.button
@@ -276,7 +276,7 @@ export default function Hero1() {
                 whileTap={{ scale: 0.97 }}
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Submitting..." : "Request a Callback"}
+                {isSubmitting ? "Submitting..." : "Submit"}
               </motion.button>
             </form>
           </motion.aside>

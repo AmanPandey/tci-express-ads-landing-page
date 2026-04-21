@@ -146,9 +146,9 @@ export default function LeadForm() {
                 style={{ color: formData.shipmentType ? "#111827" : "#9ca3af" }}
               >
                 <option value="">Shipment Type</option>
-                <option value="Air Shipment">Air</option>
                 <option value="Surface Shipment">Surface</option>
-                <option value="Express Shipment">Express</option>
+                <option value="Air Shipment">Air</option>
+                <option value="Rail Shipment">Rail</option>
               </select>
 
               <button type="submit" className="lf-btn" disabled={isSubmitting}>
